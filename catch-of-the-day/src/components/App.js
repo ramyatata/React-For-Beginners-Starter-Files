@@ -9,13 +9,17 @@ class App extends React.Component {
   constructor(){
     super();
     this.state = {
-      fishes: [],
+      fishes: {},
       order: {}
     };
   }
 
   addFish = (fish) => {
-    this.setState
+    console.log(`fish: ${fish}`);
+    const fishes = {...this.state.fishes};
+    fishes[`fish${Date.now()}`] = fish;
+    this.setState({fishes: fishes});
+    console.log(this.state.fishes);
   }
 
   render () {
