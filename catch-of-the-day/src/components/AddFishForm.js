@@ -17,7 +17,6 @@ class AddFishForm extends React.Component {
       description: this.descriptionRef.value.value,
       image: this.imageRef.value.value
     };
-
     this.props.addFish(fish);
     event.currentTarget.reset();
   }
@@ -32,7 +31,7 @@ class AddFishForm extends React.Component {
           <option value={false}>SoldOut!</option>
         </select>
         <textarea name='description' placeholder='Description' ref={this.descriptionRef}></textarea>
-        <input name='image' placeholder='' placeholder='Image' ref={this.imageRef}/>
+        <input name='image' placeholder='Image' ref={this.imageRef}/>
         <button type='submit'>Add Fish</button>
       </form>
     );
